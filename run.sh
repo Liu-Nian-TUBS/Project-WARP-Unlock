@@ -16,8 +16,9 @@ function Start {
 
 function Check_System_Depandencies {
     echo -e " [Info] Installing Depandencies..."
-    apt-get update >/dev/null
-    apt-get install -yq ipset dnsmasq wireguard resolvconf mtr >/dev/null 2>&1
+#    apt-get update >/dev/null
+#    apt-get install -yq ipset dnsmasq wireguard resolvconf mtr >/dev/null 2>&1
+     yum install ipset dnsmasq wireguard resolvconf mtr >/dev/null 2>&1
     Download_Profile
     Generate_WireGuard_WARP_Profile
 }
